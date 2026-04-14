@@ -1,0 +1,154 @@
+.header {
+    width: 100%;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    /* glass effect */
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+.header__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LOGO */
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.header__logo img {
+    width: 70px;
+    transition: transform 0.3s ease;
+}
+
+.header__logo:hover img {
+    transform: scale(1.05);
+}
+
+.header__logo h2 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.header__logo p {
+    font-size: 12px;
+    color: #7b7b7b;
+}
+
+/* NAV */
+.header__nav {
+    display: flex;
+    gap: 28px;
+}
+
+.header__nav a {
+    position: relative;
+    color: #222;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+/* underline animation */
+.header__nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: #2D9CDB;
+    transition: 0.3s;
+}
+
+.header__nav a:hover {
+    color: #2D9CDB;
+}
+
+.header__nav a:hover::after {
+    width: 100%;
+}
+
+/* SEARCH */
+.header__search {
+    position: relative;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    background: #f8f9fb;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.header__search:hover {
+    border: 1px solid #2D9CDB;
+    box-shadow: 0 0 0 3px rgba(45, 156, 219, 0.1);
+}
+
+.header__search input {
+    border: none;
+    background: transparent;
+    padding: 12px 15px;
+    width: 160px;
+    font-size: 14px;
+}
+
+.header__search span {
+    padding-right: 12px;
+    color: #888;
+    transition: 0.3s;
+}
+
+.header__search:hover span {
+    color: #2D9CDB;
+}
+
+/* BUTTON */
+.header__order_call button {
+    border-radius: 40px !important;
+    background: linear-gradient(135deg, #2D9CDB, #56CCF2) !important;
+    box-shadow: 0 6px 20px rgba(45, 156, 219, 0.4);
+    transition: 0.3s !important;
+}
+
+.header__order_call button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(45, 156, 219, 0.6);
+}
+
+/* PHONE */
+.header__info h2 a {
+    font-size: 18px;
+    font-weight: 700;
+    color: #222;
+    transition: 0.3s;
+}
+
+.header__info h2 a:hover {
+    color: #2D9CDB;
+}
+
+.header__info p {
+    font-size: 12px;
+    color: #888;
+}
+@media (max-width: 768px){
+    .container-app{
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
