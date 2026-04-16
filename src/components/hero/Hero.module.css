@@ -1,0 +1,130 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* СЛАЙДЕР */
+.slider {
+    width: 70%; /* Гибкая ширина */
+    height: 740px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.slider :global(.swiper) {
+    width: 100%;
+    height: 100%;
+}
+
+/* Контент внутри слайда */
+.slideContent {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center; /* Центрирование текста по вертикали (или flex-end для низа) */
+    padding: 60px;
+    position: relative;
+}
+
+.slideContent::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.6), transparent);
+}
+
+.slideText {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 500px;
+}
+
+.slideText h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.slideText p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Кнопка Подробнее */
+.moreBtn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.moreBtn:hover {
+    background-color: #2980b9;
+}
+
+/* ПРАВАЯ КОЛОНКА */
+.news {
+    width: 30%;
+    height: 740px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.newsCard {
+    flex: 1;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px;
+    color: #fff;
+}
+
+.newsCard::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.newsCard h2, .newsCard p {
+    position: relative;
+    z-index: 1;
+}
+
+.newsCard h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.newsCard p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Стили пагинации Swiper (точки) */
+.slider :global(.swiper-pagination-bullet) {
+    background: #fff;
+    opacity: 0.5;
+}
+.slider :global(.swiper-pagination-bullet-active) {
+    opacity: 1;
+    background: #fff;
+}
